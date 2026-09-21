@@ -41,7 +41,7 @@ jobs:
     # 5. Rodar testes (headless obrigatório em CI)
     - name: Executar testes Robot Framework
       run: |
-        robot --variable HEADLESS:True--outputdir results tests/
+        robot --variable HEADLESS:True --outputdir results tests/
 
     # 6. Upload dos relatórios do Robot Framework
     - name: Upload relatórios
