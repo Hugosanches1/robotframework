@@ -4,8 +4,7 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 
 *** Variables ***
-${HEADLESS}    True
-${DIRETORIO}   ./screenshots
+${DIRETORIO}    ${EXECDIR}${/}screenshots
 
 *** Test Cases ***
 Abrir Navegador Chrome
