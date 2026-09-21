@@ -31,6 +31,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
+        
+    # Remover chromedriver antigo (IMPORTANTE)
+    - name: Limpar ChromeDriver antigo
+      run: |
+        sudo apt-get remove -y chromium-chromedriver || true
+        sudo rm -f /usr/bin/chromedriver || true
 
     # 5. Rodar testes (headless obrigatório em CI)
     - name: Executar testes Robot Framework
