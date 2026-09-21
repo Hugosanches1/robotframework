@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Robot Framework outputs
+output.xml
+log.html
+report.html
+output/
+reports/
+results/
+
+# Screenshots
+screenshots/
+*.png
+
+# Selenium / drivers
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+
+# Coverage / test
+.coverage
+htmlcov/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
