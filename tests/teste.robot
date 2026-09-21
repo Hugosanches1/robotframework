@@ -4,12 +4,12 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 
 *** Variables ***
-${OPTIONS}    add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+${HEADLESS}    True
 ${DIRETORIO}   ./screenshots
 
 *** Test Cases ***
 Abrir Navegador Chrome
-    Open Browser    https://seubarriga.wcaquino.me/    chrome    options=${OPTIONS}
+    Open Browser    https://seubarriga.wcaquino.me/    chrome
     maximize Browser Window
     Sleep    1s
     input Text    id=email    robot123@robot123
