@@ -9,7 +9,7 @@ ${DIRETORIO}   ./screenshots
 
 *** Test Cases ***
 Abrir Navegador Chrome
-    Open Browser    https://seubarriga.wcaquino.me/    chrome
+    Open Browser    https://seubarriga.wcaquino.me/    chrome    options=add_argument("--headless=new")
     maximize Browser Window
     Sleep    1s
     input Text    id=email    robot123@robot123

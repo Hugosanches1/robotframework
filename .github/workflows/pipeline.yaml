@@ -26,24 +26,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # 4. Instalar Chrome (necessário para Selenium)
-    - name: Instalar Google Chrome
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-        
-    # Remover chromedriver antigo (IMPORTANTE)
-    - name: Limpar ChromeDriver antigo
-      run: |
-        sudo apt-get remove -y chromium-chromedriver || true
-        sudo rm -f /usr/bin/chromedriver || true
-
-    # 5. Rodar testes (headless obrigatório em CI)
+    # 4. Rodar testes (headless obrigatório em CI)
     - name: Executar testes Robot Framework
       run: |
-        robot --variable HEADLESS:True --outputdir results tests/
+        robot --outputdir results tests/
 
-    # 6. Upload dos relatórios do Robot Framework
+    # 5. Upload dos relatórios do Robot Framework
     - name: Upload relatórios
       uses: actions/upload-artifact@v4
       if: always()
@@ -54,7 +42,7 @@ jobs:
           results/log.html
           results/report.html
 
-    # 7. Upload das screenshots (evidências)
+    # 6. Upload das screenshots (evidências)
     - name: Upload screenshots
       uses: actions/upload-artifact@v4
       if: always()
